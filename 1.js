@@ -6,8 +6,8 @@ function Drag(id){
 Drag.prototype.fnDown = function(){
 	var _this = this;
 	this.obj.addEventListener('mousedown',function(ev){
-		_this.disX = ev.pageX - this.obj.offsetLeft;
-		_this.disY = ev.pageY - this.obj.offsetTop;
+		_this.disX = ev.pageX - _this.obj.offsetLeft;
+		_this.disY = ev.pageY - _this.obj.offsetTop;
 		
 		
 		document.addEventListener('mousemove',move);
@@ -29,3 +29,7 @@ Drag.prototype.fnMove = function(ev){
 	
 }
 
+Drag.prototype.fnUp = function(move,up){
+	 document.removeEventListener('mousemove',move);
+	 document.removeEventListener('mouseup',up);
+};
