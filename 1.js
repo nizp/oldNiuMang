@@ -6,3 +6,7 @@ function Drag(id){
 Drag.prototype.fnDown = function(){
 	 
 };
+Drag.prototype.fnUp = function(move,up){
+	 document.removeEventListener('mousemove',move);
+	 document.removeEventListener('mouseup',up);
+};
