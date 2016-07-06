@@ -24,8 +24,8 @@ Drag.prototype.fnDown = function(){
 };
 Drag.prototype.fnMove = function(ev){
 	
-	this.obj.style.left = ev.clientX - this.disX + 'px';
-	this.obj.style.top = ev.clientY - this.disY + 'px';
+	this.obj.style.left = ev.pageX - this.disX + 'px';
+	this.obj.style.top = ev.pageY - this.disY + 'px';
 	
 	console.log(123);
 	
