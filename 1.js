@@ -11,6 +11,11 @@ Drag.prototype.fnDown = function(){
 		
 		
 		document.addEventListener('mousemove',move);
+		document.addEventListener('mouseup',up);
+		
+		function up(ev){
+			_this.fnUp(move,up);
+		}
 		
 		function move(ev){
 			_this.fnMove(ev);
